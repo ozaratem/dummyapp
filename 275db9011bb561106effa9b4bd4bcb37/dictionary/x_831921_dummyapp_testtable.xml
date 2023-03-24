@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="658d7d011bb561106effa9b4bd4bcb2e" label="TestTable" max_length="40" name="x_831921_dummyapp_testtable" type="collection">
         <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Domain" max_length="32" name="sys_domain" reference="domain" type="reference"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
     </element>
 </database>
